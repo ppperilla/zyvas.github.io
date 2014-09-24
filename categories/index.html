@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tag:   | taevas&#39;blog · 拥有梦想的人不做选择题，只做证明题。</title>
+    <title>Category:   | taevas&#39;blog · 拥有梦想的人不做选择题，只做证明题。</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -71,7 +71,7 @@
                     <li id="nav-links"><a href="/links">链接</a></li>
                     
                     
-                    <li><a href="https://github.com/XadillaX" target="_blank">GitHub</a></li>
+                    <li><a href="https://github.com/zyvas" target="_blank">GitHub</a></li>
                 </ul>
             </div>
         </div>
@@ -84,7 +84,7 @@
         
     $(function() {
         // page-id...
-        var pageId = "tags/tags.html";
+        var pageId = "categories/index.html";
         pageId = pageId.substr(0, pageId.indexOf("/"));
         if(pageId === "") pageId = "index";
         
@@ -96,8 +96,8 @@
 <div class="container archive-body">
     <div class="row">
         <div class="col-xs-3 well">
-            <div class="archive-title" >
-                <h2 class="tag-icon">标签</h2>
+            <div class="category-title" >
+                <h2 class="category-icon">分类</h2>
                 
             </div>
         </div>
@@ -110,14 +110,14 @@
 <script>
 $(function() {
     var box = $('.all-list-box');
-    var first = $('.archive-title a:first-of-type');
-    var list = $('.archive-title a');
+    var first = $('.category-title a:first-of-type');
+    var list = $('.category-title a');
     
-    box.load(first.attr('data-src').toString() + ' #tag-list-body');
+    box.load(first.attr('data-src').toString() + ' #category-list-body');
     first.addClass('currentTag');
     list.each(function() {
         $(this).click(function() {
-            var listSrc = $(this).attr('data-src').toString() + ' #tag-list-body';
+            var listSrc = $(this).attr('data-src').toString() + ' #category-list-body';
             box.load(listSrc);
             list.removeClass('currentTag');
             $(this).addClass('currentTag');
